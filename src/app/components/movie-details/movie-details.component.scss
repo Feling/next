@@ -19,6 +19,8 @@
 }
 
 .movie-rating {
+  display: flex;
+  align-items: center;
   text-align: left;
   font: normal normal normal 25px/21px Arial;
   letter-spacing: 0px;
@@ -34,12 +36,31 @@
   letter-spacing: -0.6px;
   color: #000000;
   opacity: 1;
-  margin-bottom: 33px;
+  margin-bottom: 219px;
+}
+
+.movie-poste {
+  float: left;
+}
+
+.card-deatil-container {
+  padding: 26px;
 }
 
 .img-style {
   width: 398px;
   height: 591px;
+}
+
+button.mat-button {
+  border: 1px solid #000000;
+  border-radius: 100px;
+  opacity: 1;
+  width: 45%;
+}
+
+.arrow-img {
+  transform: rotate(180deg);
 }
 
 @media screen and (max-width: 600px) {
@@ -50,6 +71,7 @@
     color: #000000;
     text-transform: uppercase;
     opacity: 1;
+    margin-bottom: 10px;
   }
 
   .img-style {
@@ -63,9 +85,12 @@
     letter-spacing: -0.4px;
     color: #000000;
     text-transform: lowercase;
+    margin-bottom: 10px;
   }
 
-  .movie-length {
+  .movie-rating {
+    display: flex;
+    align-items: center;
     text-align: left;
     font: normal normal normal 18px/19px Arial;
     letter-spacing: 0px;
@@ -79,6 +104,17 @@
     font: normal normal normal 16px/17px Georgia;
     letter-spacing: -0.32px;
     color: #000000;
-    text-transform: lowercase;
+    margin-bottom: 30px;
+  }
+
+  button.mat-button {
+    border: 1px solid #000000;
+    border-radius: 100px;
+    opacity: 1;
+    width: 100%;
+  }
+
+  .card-deatil-container {
+    padding: 0;
   }
 }

@@ -1,13 +1,27 @@
-
-<mat-card fxLayout="column" fxFlexFill class="movie-card mat-elevation-z0">
-  <img mat-card-image src={{this.movie?.image}} alt="Photo of a Shiba Inu">
-  <mat-card-content>
-  {{this.movie?.title}} ({{this.movie?.released}})
-  <pre><mat-icon aria-hidden="false">star</mat-icon>{{this.movie.rating}}</pre>
+<mat-card
+  fxLayout="column"
+  fxFlexFill="stretch"
+  class="movie-card mat-elevation-z0"
+>
+  <img
+    mat-card-image
+    src="{{ this.movie?.image }}"
+    alt="Photo of a Shiba Inu"
+  />
+  <mat-card-content class="movie-title">
+    <div class="movie-name">
+      {{ this.movie?.title }} ({{ this.movie?.released }})
+    </div>
+    <div class="movie-rating">
+      <mat-icon aria-hidden="false">star</mat-icon>{{ this.movie.rating }}
+    </div>
   </mat-card-content>
   <mat-card-actions class="button-custom">
-      <div><button mat-button (click)="movieDetailsClicke(movie)">Read More<img src="assets/arrow.png" alt=""></button>
-      </div>
+    <div>
+      <button mat-button (click)="movieDetailsClicke(movie)">
+        Read More              <img src="assets/arrow.png" alt="" />
+      </button>
+    </div>
   </mat-card-actions>
   <mat-card-footer></mat-card-footer>
 </mat-card>

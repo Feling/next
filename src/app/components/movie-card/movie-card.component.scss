@@ -16,6 +16,30 @@ mat-card-content {
   opacity: 1;
 }
 
+.movie-title {
+  text-align: left;
+  font: normal normal normal 30px/31px Georgia;
+  letter-spacing: -0.6px;
+  color: #000000;
+  text-transform: capitalize;
+  opacity: 1;
+}
+
+.movie-name {
+   margin-bottom: 18px;
+}
+
+.movie-rating {
+  text-align: left;
+font: normal normal normal 25px/31px Arial;
+letter-spacing: -0.5px;
+color: #000000;
+text-transform: capitalize;
+opacity: 1;
+display: flex;
+align-items: center;
+}
+
 @media screen and (max-width: 600px) {
   mat-card-content {
     font-size: 20px;
@@ -26,16 +50,42 @@ button.mat-button {
   border: 1px solid #000000;
   border-radius: 100px;
   opacity: 1;
-  width: 100%;
+  width: 260px;
+  height: 42px;
 }
+
+.buttons-test {}
+
+.buttons-test {}
 
 @media screen and (max-width: 600px) {
   button.mat-button {
     width: 142px;
     height: 28px;
+    line-height: 0px;
+    text-align: start;
+  }
+
+  .movie-title {
+    text-align: left;
+    font: normal normal normal 20px/21px Georgia;
+    letter-spacing: -0.4px;
+    color: #000000;
+    text-transform: capitalize;
+    opacity: 1;
+  }
+
+  .movie-rating {
+    text-align: left;
+    font: normal normal normal 20px/25px Arial;
+    letter-spacing: -0.4px;
+    color: #000000;
+    text-transform: capitalize;
+    opacity: 1;
   }
 }
 
 .button-custom {
   text-align: left;
+  margin-top: auto;
 }

@@ -1,6 +1,6 @@
 <div fxLayout="column" class="container" fxFlexFill>
   <div fxFlex="10" class="main-title">
-    <h1>EXPLORE YOUR NEXT MOVIES AND TV SHOW</h1>
+    EXPLORE YOUR NEXT MOVIES AND TV SHOWS
   </div>
   <div fxFlex="auto">
     <div class="movie-cards" fxLayout="row wrap" fxLayoutGap="16px grid">
@@ -8,7 +8,7 @@
         fxFlex="15%"
         fxFlex.xs="40%"
         fxFlex.sm="33%"
-        *ngFor="let movie of movies"
+        *ngFor="let movie of paginatedMovies"
       >
         <app-movie-card
           [movie]="movie"

@@ -1,20 +1,21 @@
-<div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column">
-  <div fxFlex="50%"
+<div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" class="card-deatil-container">
+  <div fxFlex="40%"
   fxFlex.xs="100%"
   fxFlex.sm="100%">
- 
-    <img class="img-style"
-      src="{{ movie?.image }}"
-      alt="{{ movie?.title }}"
-    />
+ <div class="movie-poster"><img class="img-style"
+  src="{{ movie?.image }}"
+  alt="{{ movie?.title }}"
+/></div>
   
   </div>
-  <div fxFlex="50%">
+  <div fxFlex="60%">
     <div class="movie-title">{{ movie?.title }}</div>
     <div class="movie-length">{{ movie?.runtime }}</div>
     <div class="movie-rating">
-      <mat-icon aria-hidden="false">star</mat-icon> {{ movie?.rating }}
+      <mat-icon aria-hidden="false">star</mat-icon> {{ movie?.rating }}/10
     </div>
     <div class="movie-synopsis" [appEncodeInnerHtml]="movie.synopsis"></div>
+   <div><button mat-button (click)="close()"><img class="arrow-img" src="assets/arrow.png" alt=""> Back to list</button></div>
+  
   </div>
 </div>

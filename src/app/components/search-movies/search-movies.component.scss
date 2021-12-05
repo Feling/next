@@ -1,3 +1,9 @@
 .search-form-field {
-    width: 26vw;
+  width: 39vw;
+}
+
+@media screen and (max-width: 600px) {
+  .search-form-field {
+    width: 78vw;
+  }
 }

@@ -19,4 +19,8 @@ export class DialogService {
     backdropClass: 'backdropBackground'
    }));
   }
+
+  closeDialog() {
+    this.dialogMatService.closeAll();
+  }
 }

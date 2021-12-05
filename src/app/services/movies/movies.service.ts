@@ -19,8 +19,6 @@ export class MoviesService {
   movies = new BehaviorSubject<Movie[]>([]);
   movies$ = this.movies.asObservable();
 
-  paginationCleared = new BehaviorSubject<boolean>(false);
-  paginationCleared$ = this.paginationCleared.asObservable();
 
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {
@@ -47,9 +45,8 @@ export class MoviesService {
 
   getMoviesFromServer(): void {
     this.httpClient.get<Array<Movie>>('http://localhost:3000/movies').pipe(catchError(this.handleError)).subscribe((movies: Movie[]) => {
-      this.paginateArray(movies, 12, 1);
       this._movies = movies;
-      this._filtredMovies = movies;
+      this.setMovies(movies);
       return;
     })
   }
@@ -58,30 +55,13 @@ export class MoviesService {
     this.dialogService.openMovieDetail(movieDetails);
   }
 
-  getMovieById(id: string) {
-  }
-
   searchByParametr(query: string) {
     if (query === "") {
-      this.paginateArray(this._movies, 12, 1);
+      this.setMovies(this._movies);
       this._filtredMovies = this._movies;
-      this.paginationCleared.next(true);
     } else {
       this._filtredMovies = this._movies.filter((movie: Movie) => movie.title.toLowerCase().includes(query.toLowerCase()));
-      this.paginateArray(this._filtredMovies, 12, 1);
+      this.setMovies(this._filtredMovies);
     }
   }
-
-  paginateArray(arr: Movie[], itempsPerPage: number, pageNumber: number) {
-    this.setMovies(arr.slice((pageNumber - 1) * itempsPerPage, pageNumber * itempsPerPage));
-  }
-
-  paginatroPageChanged(pageIndex: number, movies: Movie[]) {
-    this.paginateArray(this._filtredMovies, 12, pageIndex + 1);
-  }
-
-  clearPagination() {
-    return this.paginationCleared$;
-  }
-
 }

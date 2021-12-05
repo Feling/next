@@ -6,7 +6,7 @@
 
 .toolbar {
     background-color: white;
-    width: 37vw;
+    // width: 37vw;
     // display: flex;;
     // justify-content: space-between;
    
@@ -15,3 +15,15 @@
 .search-input {
     align-self: flex-end;
 }
+
+@media screen and (max-width: 600px) {
+    .search-input {
+        align-self: center;
+    }
+
+    .logo {
+        height: auto;
+        height: 50px;
+        width: 158px;
+    }
+  }
