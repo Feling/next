@@ -1,0 +1,33 @@
+// .mat-grid-tile {
+//     background: #00D7FF;
+//   }
+
+//   .mat-grid-tile .mat-grid-tile-footer {
+//     background: #231F20;
+//     height: 20%;
+//   }
+
+//   .mat-grid-tile .mat-grid-tile-header {
+//     background: white;
+//     height: 10%;
+//   }
+
+// .container {
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   grid-template-rows: 1fr 16fr 2fr;;
+//   grid-template-areas:
+//     "app-toolbar"
+//     "app-movie-container"
+//     "app-footer";
+// }
+.app-toolbar {}
+
+.app-movie-container {
+  grid-area: app-movie-container;
+  background-color: #00D7FF;
+}
+.app-footer {
+  grid-area: app-footer;
+  background-color: #231F20;
+}

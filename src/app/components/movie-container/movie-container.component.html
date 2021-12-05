@@ -1,0 +1,30 @@
+<div fxLayout="column" class="container" fxFlexFill>
+  <div fxFlex="10" class="main-title">
+    <h1>EXPLORE YOUR NEXT MOVIES AND TV SHOW</h1>
+  </div>
+  <div fxFlex="auto">
+    <div class="movie-cards" fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div
+        fxFlex="15%"
+        fxFlex.xs="40%"
+        fxFlex.sm="33%"
+        *ngFor="let movie of movies"
+      >
+        <app-movie-card
+          [movie]="movie"
+          (movieDetailsSelect)="openMovieDetails($event)"
+        ></app-movie-card>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="auto">
+    <mat-paginator
+      #paginator
+      [length]="movieLength"
+      [pageSize]="12"
+      (page)="pageChanged($event)"
+      aria-label="Select page"
+    >
+    </mat-paginator>
+  </div>
+</div>

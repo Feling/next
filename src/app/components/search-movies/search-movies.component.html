@@ -1,0 +1,21 @@
+<div class="search-form-field">
+  <mat-form-field>
+    <mat-select>
+      <mat-option value="option">Option</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Search Movie...</mat-label>
+    <input #searchInput matInput type="text" [(ngModel)]="searchValue" />
+    <button
+      *ngIf="searchValue"
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      (click)="searchValue = ''; clearSearch()"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+</div>

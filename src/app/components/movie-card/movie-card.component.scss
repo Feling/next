@@ -1,0 +1,41 @@
+.example-card {
+  max-width: 260;
+}
+
+mat-card {
+  background-color: unset;
+}
+
+mat-card-content {
+  font-size: 30px;
+  text-align: left;
+  font: normal normal normal 30px/31px Georgia;
+  letter-spacing: -0.6px;
+  color: #000000;
+  text-transform: capitalize;
+  opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+  mat-card-content {
+    font-size: 20px;
+  }
+}
+
+button.mat-button {
+  border: 1px solid #000000;
+  border-radius: 100px;
+  opacity: 1;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  button.mat-button {
+    width: 142px;
+    height: 28px;
+  }
+}
+
+.button-custom {
+  text-align: left;
+}
