@@ -4,8 +4,8 @@ import { SearchMoviesService } from 'src/app/services/search-movies.service';
 
 @Component({
   selector: 'app-search-movies',
-  templateUrl: './search-movies.component.html',
-  styleUrls: ['./search-movies.component.scss']
+  templateUrl: './movies-search.component.html',
+  styleUrls: ['./movies-search.component.scss']
 })
 export class SearchMoviesComponent implements OnInit {
   @ViewChild('searchInput', { static: true })

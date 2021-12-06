@@ -2,7 +2,7 @@
   <div fxFlex="10" class="main-title">
     EXPLORE YOUR NEXT MOVIES AND TV SHOWS
   </div>
-  <div fxFlex="auto">
+  <div fxFlex="auto" *ngIf="paginatedMovies.length > 0; else noMoviesFound">
     <div class="movie-cards" fxLayout="row wrap" fxLayoutGap="16px grid">
       <div
         fxFlex="15%"
@@ -17,6 +17,8 @@
       </div>
     </div>
   </div>
+  <ng-template #noMoviesFound><div class="main-title">Movie not found, Please try again.</div></ng-template>
+
   <div fxFlex="auto">
     <mat-paginator
       #paginator

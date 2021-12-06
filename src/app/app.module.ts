@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { HeaderComponent } from './components/header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MovieContainerComponent } from './components/movie-container/movie-container.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -19,7 +19,7 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
 import {MatDialogModule} from '@angular/material/dialog';
 import { MovieTextPipe } from './pipes/movie-text.pipe';
 import { EncodeInnerHtmlDirective } from './directives/encode-inner-html.directive';
-import { SearchMoviesComponent } from './components/search-movies/search-movies.component';
+import { SearchMoviesComponent } from './components/movies-search/movies-search.component';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -30,7 +30,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 @NgModule({
   declarations: [
     AppComponent,
-    ToolbarComponent,
+    HeaderComponent,
     MovieContainerComponent,
     FooterComponent,
     MovieCardComponent,

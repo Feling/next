@@ -26,18 +26,18 @@ mat-card-content {
 }
 
 .movie-name {
-   margin-bottom: 18px;
+  margin-bottom: 18px;
 }
 
 .movie-rating {
   text-align: left;
-font: normal normal normal 25px/31px Arial;
-letter-spacing: -0.5px;
-color: #000000;
-text-transform: capitalize;
-opacity: 1;
-display: flex;
-align-items: center;
+  font: normal normal normal 25px/31px Arial;
+  letter-spacing: -0.5px;
+  color: #000000;
+  text-transform: capitalize;
+  opacity: 1;
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: 600px) {
@@ -53,10 +53,6 @@ button.mat-button {
   width: 260px;
   height: 42px;
 }
-
-.buttons-test {}
-
-.buttons-test {}
 
 @media screen and (max-width: 600px) {
   button.mat-button {
