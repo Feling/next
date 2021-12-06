@@ -1,4 +1,4 @@
-import {Movie} from './movie.interface'
+import { Movie } from './movie.interface'
 
 export interface MovieFilterData {
     movies: Movie[];

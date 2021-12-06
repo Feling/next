@@ -1,8 +1,8 @@
-import { EncodeInnerHtmlDirective } from './encode-inner-html.directive';
+// import { EncodeInnerHtmlDirective } from './encode-inner-html.directive';
 
-describe('EncodeInnerHtmlDirective', () => {
-  it('should create an instance', () => {
-    const directive = new EncodeInnerHtmlDirective();
-    expect(directive).toBeTruthy();
-  });
-});
+// xdescribe('EncodeInnerHtmlDirective', () => {
+//   it('should create an instance', () => {
+//     const directive = new EncodeInnerHtmlDirective();
+//     expect(directive).toBeTruthy();
+//   });
+// });

@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { debounceTime, distinctUntilChanged, fromEvent, map } from 'rxjs';
-import { SearchMoviesService } from 'src/app/services/search-movies.service';
+import { MoviesService } from 'src/app/services/movies/movies.service';
 
 @Component({
   selector: 'app-search-movies',
@@ -8,40 +8,35 @@ import { SearchMoviesService } from 'src/app/services/search-movies.service';
   styleUrls: ['./movies-search.component.scss']
 })
 export class SearchMoviesComponent implements OnInit {
+
   @ViewChild('searchInput', { static: true })
   searchInput!: ElementRef;
-
   searchValue = '';
 
-
-  constructor(private searchMoviesService: SearchMoviesService) { }
+  constructor(private moviesService: MoviesService) { }
 
   ngOnInit(): void {
     this.subToInputEvent();
   }
 
-  subToInputEvent() {
+  subToInputEvent(): void {
     fromEvent(this.searchInput.nativeElement, 'keyup').pipe(
       map((keyEvent: any) => {
-        if (keyEvent.target.value === '') {
-          this.clearSearch();
-        }
         return keyEvent.target.value;
       })
-      , debounceTime(100)
+      , debounceTime(500)
       , distinctUntilChanged(),
     )
-    .subscribe((searchString: string) => {
-      this.searchMovie(searchString);
-    })
+      .subscribe((searchString: string) => {
+        this.searchMovie(searchString);
+      })
   }
 
-  searchMovie(query: string) {
-    this.searchMoviesService.searchMovie(query);
+  searchMovie(query: string): void {
+    this.moviesService.searchByParameter(query);
   }
 
-
-  clearSearch() {
-    this.searchMoviesService.searchMovie('');
+  clearSearch(): void {
+    this.moviesService.searchByParameter('');
   }
 }

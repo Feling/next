@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
-import { PaginationService } from 'src/app/services/pagination.service';
+import { PaginationService } from 'src/app/services/pagination/pagination.service';
 import { Movie } from '../../models/movie.interface';
 import { MoviesService } from '../../services/movies/movies.service';
 
@@ -28,11 +28,11 @@ export class MovieContainerComponent implements OnInit {
     });
   }
 
-  openMovieDetails(selectedMovie: Movie) {
+  openMovieDetails(selectedMovie: Movie): void {
     this.moviesService.openMovieDetails(selectedMovie);
   }
 
-  pageChanged(event: PageEvent) {
+  pageChanged(event: PageEvent): void {
     this.paginatedMovies = this.paginationService.paginatroPageChanged(event.pageIndex, this.movies);
   }
 

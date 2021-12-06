@@ -17,7 +17,6 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import { MovieTextPipe } from './pipes/movie-text.pipe';
 import { EncodeInnerHtmlDirective } from './directives/encode-inner-html.directive';
 import { SearchMoviesComponent } from './components/movies-search/movies-search.component';
 import {MatInputModule} from '@angular/material/input';
@@ -35,7 +34,6 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     FooterComponent,
     MovieCardComponent,
     MovieDetailsComponent,
-    MovieTextPipe,
     EncodeInnerHtmlDirective,
     SearchMoviesComponent
   ],

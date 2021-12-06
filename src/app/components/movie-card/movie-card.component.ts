@@ -17,7 +17,7 @@ export class MovieCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  movieDetailsClicke(selectedMovie: Movie) {
+  movieDetailsClicke(selectedMovie: Movie): void {
     this.movieDetailsSelect.emit(selectedMovie);
   }
 

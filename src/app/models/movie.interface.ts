@@ -7,7 +7,7 @@ export interface Movie {
     type: string;
     released: string;
     runtime: string;
-largeImage: string;
+largeimage: string;
     unogsdate: string;
     imdbid: string;
     download: string;
